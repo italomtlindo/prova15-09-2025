@@ -1,68 +1,111 @@
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #e6f7ff;
-  color: #023033;
+    background: url('fundobr.jpg') no-repeat;
+    background-size: cover;
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #0f5f6f;
-  padding: 10px 20px;
-  color: white;
-}
-
-nav h1 {
-  margin: 0;
-  font-size: 20px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-  margin: 0;
-  padding: 0;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
 header {
-  text-align: center;
-  padding: 40px 20px;
-  background-color: #bfefff;
+    background-color: rgb(59, 0, 140);
+    color: rgb(255, 255, 255);
+    padding: 10px 0;
+    text-align: center;
+}
+header h1 {
+    margin:0;
+}
+nav ul{
+    list-style: none;
+    padding: 0;
+}
+nav ul li{
+    display: inline;
+    margin: 0 10px;
 }
 
-.cards {
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.banner{
+    text-align: center;
+}
+
+.shadow-dance-text {
+    font-size: 4rem;
+    color: white;
+    text-shadow: 5px 5px 0 red, 10px 10px 0 blue;
+    animation: shadow-dance 2s infinite;
+}
+
+@keyframes shadow-dance {
+    0%, 100% {
+        text-shadow: 5px 5px 0 red, 10px 10px 0 blue;
+    }
+    50% {
+        text-shadow: -5px -5px 0 blue, -10px -10px 0 red;
+    }
+}
+section {
+    padding: 20px;
+    margin: 0 10px;
+
+}
+
+.cartao {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 200px;
+    vertical-align: top;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0,35 ease, box-shadow 0,3s ease;
+}
+.cartao:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.cartao img{
+    width: 100%;
+    border-radius: 8px;
+}
+form {
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+  gap: 15px;
 }
 
-.card {
-  background-color: white;
+input, textarea {
+  padding: 10px;
   border-radius: 8px;
-  padding: 20px;
-  width: 250px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
+  border: thick double #32a1ce;
+  outline: none;
+  font-size: 16px;
 }
 
-.card:hover {
-  transform: scale(1.05);
+textarea {
+  resize: none;
+  height: 120px;
 }
 
-footer {
-  text-align: center;
-  padding: 15px;
-  background-color: #0f5f6f;
-  color: white;
-  margin-top: 20px;
+button {
+  padding: 12px;
+  color: #fff;
+  background: #32a1ce;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #134e67;
 }
